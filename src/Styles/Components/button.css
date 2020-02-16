@@ -1,0 +1,7 @@
+.btn{
+    @apply px-10 py-2 m-4 rounded; 
+}
+
+.btn.btn-primary{
+    @apply bg-green-600;
+}
