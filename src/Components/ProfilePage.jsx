@@ -9,7 +9,7 @@ const ProfilePage = () => {
 
   return (
     <div className = "mx-auto w-11/12 md:w-2/4 py-8 px-4 md:px-8">
-      <div className="flex border border-blue-400 px-3 py-4">
+      <div className="flex border flex-col md:flex-row border-blue-400 px-3 py-4">
         <div
           style={{
             background: `url(${photoURL || 'https://res.cloudinary.com/dqcsk8rsc/image/upload/v1577268053/avatar-1-bitmoji_upgwhc.png'})  no-repeat center center`,
@@ -19,7 +19,7 @@ const ProfilePage = () => {
           }}
           className="border border-blue-300"
         ></div>
-        <div className = "pl-4">
+        <div className = "md:pl-4">
         <h2 className = "text-2xl font-semibold">{displayName}</h2>
         <h3 className = "italic">{email}</h3>
         </div>
