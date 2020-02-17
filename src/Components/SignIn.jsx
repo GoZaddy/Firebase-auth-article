@@ -79,9 +79,9 @@ const SignIn = () => {
             Sign up here
           </Link>{" "}
           <br />{" "}
-          <a href="#" className="text-blue-500 hover:text-blue-600">
+          <Link to="passwordReset" className="text-blue-500 hover:text-blue-600">
             Forgot Password?
-          </a>
+          </Link>
         </p>
       </div>
     </div>
