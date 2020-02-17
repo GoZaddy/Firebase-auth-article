@@ -17,7 +17,9 @@ const PasswordReset = () => {
 
   const sendResetEmail = (event) => {
       event.preventDefault();
-      auth.sendPasswordResetEmail(email).catch(() => {
+      auth.sendPasswordResetEmail(email).then(() => {
+          console.log(email);
+      }).catch(() => {
           setError('Error resetting password');
       });
   }
@@ -37,7 +39,7 @@ const PasswordReset = () => {
           onChange={onChangeHandler}
           className = "mb-3 w-full px-1 py-2"
         />
-        <button className="w-full bg-blue-400 text-white py-3" onClick = {() => {sendResetEmail()}}>Send me a reset link</button>
+        <button className="w-full bg-blue-400 text-white py-3" onClick = {(event) => {sendResetEmail(event)}}>Send me a reset link</button>
       </form>
 
       <Link to = "/" className =  "my-2 text-blue-700 hover:text-blue-800 text-center block">&larr; back to sign in page</Link>
